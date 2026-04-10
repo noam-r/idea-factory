@@ -1,0 +1,59 @@
+site_name: Idea Factory
+site_description: Guided concept development system for independent thinkers
+site_url: https://example.com/idea-factory/
+
+theme:
+  name: null
+  custom_dir: plumbus-theme/
+
+plugins:
+  - search
+  - encryptcontent:
+      global_password: !ENV [SITE_PASSWORD, '']
+      title_prefix: ''
+      summary: 'This content is password protected.'
+      placeholder: 'Enter password'
+      password_button: true
+      password_button_text: 'Unlock'
+      decryption_failure_message: 'Incorrect password.'
+      encryption_info_message: 'Contact the author for access.'
+      webcrypto: true
+      remember_password: true
+      kdf_pow: 3
+      encrypted_something:
+        toc: [aside, class]
+
+nav:
+  - Overview: index.md
+  - Concept:
+      - What Idea Factory Is: concept/what-it-is.md
+      - Who It Is For: concept/who-its-for.md
+      - Core Promise: concept/core-promise.md
+      - System Contract: concept/system-contract.md
+  - Workflow:
+      - Workflow Overview: workflow/overview.md
+      - Capture: workflow/capture.md
+      - Clarify: workflow/clarify.md
+      - Structure: workflow/structure.md
+      - Evaluate: workflow/evaluate.md
+      - Compile: workflow/compile.md
+      - Publish: workflow/publish.md
+  - Evaluation:
+      - Evaluation Framework: evaluation/framework.md
+      - Recommendation Model: evaluation/recommendations.md
+      - Defensibility: evaluation/defensibility.md
+  - Governance:
+      - Editability Model: governance/editability.md
+      - Integrity and Cooperation: governance/integrity.md
+      - Linked Projects: governance/linked-projects.md
+  - Progress:
+      - Completion Model: progress/completion.md
+      - Progress Efficiency Model: progress/efficiency.md
+      - Visibility Model: progress/visibility.md
+  - Artifact:
+      - Concept Artifact Model: artifact/model.md
+      - Standard Pages: artifact/standard-pages.md
+      - Pages and Entities: artifact/entities.md
+  - Phase I:
+      - Phase I Summary: phase1/summary.md
+      - Phase I Scope and Boundaries: phase1/scope.md
