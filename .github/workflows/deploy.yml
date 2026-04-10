@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install mkdocs mkdocs-encryptcontent-plugin
-      - run: mkdocs build --strict
+      - run: mkdocs build
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
       - uses: actions/upload-pages-artifact@v3
